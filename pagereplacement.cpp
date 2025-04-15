@@ -31,14 +31,13 @@ int FIFO(const vector<int>& pages, int frames) {
 int Optimal(const vector<int>& pages, int frames) {
     unordered_set<int> memory;
     int faults = 0;
-
     cout << "\n[Optimal] Page Replacement:\n";
     for (int i = 0; i < pages.size(); i++) {
         int page = pages[i];
         if (memory.find(page) == memory.end()) {
             faults++;
             if (memory.size() == frames) {
-                int farthest = i + 1, pageToRemove = -1;
+                int pageToRemove = -1;
                 int maxIndex = -1;
                 for (int memPage : memory) {
                     int j;
@@ -68,7 +67,6 @@ int LRU(const vector<int>& pages, int frames) {
     unordered_set<int> memory;
     unordered_map<int, int> recent;
     int faults = 0;
-
     cout << "\n[LRU] Page Replacement:\n";
     for (int i = 0; i < pages.size(); i++) {
         int page = pages[i];

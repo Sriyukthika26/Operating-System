@@ -15,8 +15,7 @@ int main() {
         return 1;
     } else if (pid == 0) {
         // Child process
-        cout << "Child process created. PID: " << getpid()
-             << ", Parent PID: " << getppid() << endl;
+        cout << "Child process created. PID: " << getpid() << ", Parent PID: " << getppid() << endl;
 
         sleep(2); // Simulate some work
 

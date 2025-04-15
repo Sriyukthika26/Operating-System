@@ -19,3 +19,4 @@ int main() {
 
     return 0;
 }
+// This code demonstrates the creation of a thread using C++11 threading library.
