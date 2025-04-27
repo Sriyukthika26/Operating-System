@@ -54,8 +54,7 @@ void consumer(int id) {
 
 void test_producer_consumer() {
     cout << "\nProducer-Consumer Problem Simulation\n";
-    cout << "-----------------------------------\n";
-    
+
     thread producers[2];
     thread consumers[2];
     
